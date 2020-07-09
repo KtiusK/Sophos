@@ -1,0 +1,93 @@
+
+
+Feature: Realizar Login en la Pagina
+  Se desea abrir la página y hacer clic
+  
+  @prioridadAlta
+  Scenario: Realiza login con datos validos 
+    Given Abrir el navegador y la pagina
+    And  Una vez que se abra ingresar usuario y password y hacer login
+    When Se inicie sesion
+    And Realizar una accion 
+    And Valida otra accion 
+    Then Cuando termine de validar 
+    And Realiza logout
+   
+    
+ 
+
+
+ @tagMyBanking2
+  Scenario: Registrar nuevo usuario
+    Given Abrir el navegador y la pagina
+     And  Escribir el name "Katiusca"
+      And  Escribir el lastname "Saldarriaga"
+       And  Escribir el phone "304984757"
+       And Escribir el email "Katy@gmail.com"
+       And Escribir la direccion "Calle 20"
+       And Escribir la ciudad "Bogota"
+       And Escribir la provincia "Distrito Capital"
+       And Escribir el coigo postal "1212"
+    And  Escribir el username "Katy@gmail.com"
+    And  Escribir password "123"
+    And  Escribir confirm password "123"
+    When Dar clic en registrar
+    And Realizar una accion 
+    And Registra el usuario
+    Then Cierra el navegador
+    
+      @prioridadAltaTabla
+  Scenario Outline: Registrar nuevo usuario desde la tabla 
+    Given Abrir el navegador y la pagina
+     And  Escribir el name <name>
+      And  Escribir el lastname <lastname>
+       And  Escribir el phone <phone>
+    And  Escribir el username <username>
+    And  Escribir password <password>
+    And  Escribir confirm password <confirpassword>
+    When Dar clic en registrar
+    And Realizar una accion 
+    And Registra el usuario
+    Then Cierra el navegador
+   Examples:
+    |name|lastname|phone|username|password|confirpassword|
+    |"Kati"|"feria"|306837|"kasafe@gmail.com"|12345|12345|
+      |"Kat"|"feriaa"|306833|"kasafes@gmail.com"|137|137|
+        |"Katius"|"ferias"|3084|"kasafesa@gmail.com"|15|15|
+    
+    
+     @prioridadAlta
+  Scenario: Registrar nuevo usuario y hace login 
+    Given Abrir el navegador y la pagina
+     And  Escribir el name "Katiusca"
+      And  Escribir el lastname "Saldarriaga"
+       And  Escribir el phone "304984757"
+    And  Escribir el username "Katy@gmail.com"
+    And  Escribir password "123"
+    And  Escribir confirm password "123"
+    When Dar clic en registrar
+    And Realizar una accion 
+    And Registra el usuario
+    Then Cierra el navegador
+ 
+      @prioridadAltaUnSoloPaso
+  Scenario: Registrar un login con un solo paso 
+    Given Abrir el navegador y la pagina
+    And Una vez que se abra hacer login con usuario "Katy@gmail.com" y password "123" y confirmar password "123"
+    When Se realiza el login en la pagina
+    Then Cierra el navegador
+    
+    
+    
+    
+
+  @prioridadBaja
+  Scenario Outline: Title of your scenario outline
+    Given I want to write a step with <name>
+    When I check for the <value> in step
+    Then I verify the <status> in step
+
+    Examples: 
+      | name  | value | status  |
+      | name1 |     5 | success |
+      | name2 |     7 | Fail    |

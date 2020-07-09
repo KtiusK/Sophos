@@ -1,0 +1,35 @@
+
+
+Feature: Realizar busqueda en Google
+  El usuario debe abrir un buscador de internet 
+  (Google Chrome, Firefox o Internet Explore) 
+  abrir la página de "https://www.google.com/"
+  
+   
+  
+  
+  @prioridadAlta
+  Scenario: Validación búsqueda en google de: "Sophos solutions"
+    Given Un navegador web abre la pagina de google
+    When El usuario digita en el campo texto el valor "Sophos solutions"
+    And Solicita la busqueda 
+    And Espera que realice la busqueda  
+    Then El usuario valida la cantidad de resultados de la consulta 
+    And La pagina realiza logout 
+   
+    
+ 
+
+
+      
+
+  @prioridadBaja
+  Scenario Outline: Title of your scenario outline
+    Given I want to write a step with <name>
+    When I check for the <value> in step
+    Then I verify the <status> in step
+
+    Examples: 
+      | name  | value | status  |
+      | name1 |     5 | success |
+      | name2 |     7 | Fail    |

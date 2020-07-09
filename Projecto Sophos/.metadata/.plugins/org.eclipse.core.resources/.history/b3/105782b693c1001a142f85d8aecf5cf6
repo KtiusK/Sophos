@@ -1,0 +1,18 @@
+package com.pageObject;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+
+public class LandingPage {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+	
+	public WebDriver driver;
+	
+	By google = By.name("q");
+	
+	
+}

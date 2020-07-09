@@ -1,0 +1,24 @@
+package Sophosolutions;
+
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.util.Properties;
+
+public class base {
+
+	public static void main(String[] args) {
+		
+
+	}
+	
+	public void inicializarDriver() throws FileNotFoundException {
+		
+		Properties propiedad = new Properties();
+		FileInputStream path = new FileInputStream("C:\\Users\\Katiusca\\eclipse-workspace\\Sophos Solutions\\E2EProject\\src\\main\\java\\Sophosolutions\\data.properties");
+		
+		propiedad.load(path);
+	
+		
+	}
+
+}

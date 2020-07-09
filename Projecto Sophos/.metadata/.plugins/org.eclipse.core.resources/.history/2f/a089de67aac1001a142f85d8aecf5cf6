@@ -1,0 +1,23 @@
+
+@tag
+Feature: Realizar búsqueda en Google
+  I want to use this template for my feature file
+
+  @tag1
+  Scenario: Realizar validación de búsqueda en google de: "Sophos solutions"
+    Given Abrir el navegador chrome
+    And Una vez que se abra el navegador ingresar "Sophos solutions" 
+    When Se introduce la palabra "Sophos solutions"
+    And Se espera que realice la búsqueda
+    Then La página de google retorna cerca de 5.410.000 resultados
+    
+  @tag2
+  Scenario Outline: Title of your scenario outline
+    Given I want to write a step with <name>
+    When I check for the <value> in step
+    Then I verify the <status> in step
+
+    Examples: 
+      | name  | value | status  |
+      | name1 |     5 | success |
+      | name2 |     7 | Fail    |

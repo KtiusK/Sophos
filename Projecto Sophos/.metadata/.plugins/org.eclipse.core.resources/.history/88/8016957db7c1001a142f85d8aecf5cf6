@@ -1,0 +1,77 @@
+package PasosScripts;
+
+import org.apache.bcel.generic.Select;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+import FuncionesLogin.LoginNewtours;
+import Sophosolutions.HomePage;
+import cucumber.api.PendingException;
+import cucumber.api.java.en.Given;
+import cucumber.api.java.en.Then;
+import cucumber.api.java.en.When;
+
+public class Metodos1 {
+
+	WebDriver driver;
+	
+	//LoginNewtours funcion_login = new LoginNewtours();
+	HomePage busqueda = new HomePage();
+	
+		@Given("^Abrir el navegador y la pagina$")
+	public void abrir_el_navegador_y_la_pagina() throws Throwable {
+		
+		System.setProperty("webdriver.chrome.driver", "C:\\Users\\Katiusca\\eclipse-workspace\\Cucumber_Pruebas\\Driver\\chromedriver.exe");
+		driver = new ChromeDriver();
+		busqueda.driver.get("https://google.com");
+				
+		driver.manage().window().maximize();
+		System.out.println("Se abre la pagina y el navegador");
+		System.out.println("Se abre el navegador");
+	
+	  
+	
+	
+	
+	@Given("^Un navegador web abre la pagina de google$")
+	public void un_navegador_web_abre_la_pagina_de_google() throws Throwable {
+	    // Write code here that turns the phrase above into concrete actions
+		System.out.println("Se abre la pagina y el navegador");
+		System.out.println("Se abre el navegador");
+	}
+
+	@When("^El usuario digita en el campo texto el valor \"(.*?)\"$")
+	public void el_usuario_digita_en_el_campo_texto_el_valor(String arg1) throws Throwable {
+	    // Write code here that turns the phrase above into concrete actions
+	  
+	}
+
+	@When("^Solicita la busqueda$")
+	public void solicita_la_busqueda() throws Throwable {
+	    // Write code here that turns the phrase above into concrete actions
+	   
+	}
+
+	@When("^Espera que realice la busqueda$")
+	public void espera_que_realice_la_busqueda() throws Throwable {
+	    // Write code here that turns the phrase above into concrete actions
+	
+	}
+
+	@Then("^El usuario valida la cantidad de resultados de la consulta$")
+	public void el_usuario_valida_la_cantidad_de_resultados_de_la_consulta() throws Throwable {
+	    // Write code here that turns the phrase above into concrete actions
+
+	}
+
+	@Then("^La pagina realiza logout$")
+	public void la_pagina_realiza_logout() throws Throwable {
+	    // Write code here that turns the phrase above into concrete actions
+
+	}
+
+
+	
+	
+}

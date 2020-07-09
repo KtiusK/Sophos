@@ -1,0 +1,65 @@
+package Sophosolutions;
+
+import static org.testng.Assert.assertEquals;
+
+import java.util.List;
+import java.io.IOException;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebElement;
+import org.testng.annotations.Test;
+
+import recursos.base;
+
+public class HomePage extends base  {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+	
+	@Test 
+	
+	public void basePage () throws IOException, InterruptedException
+	{
+		//llamamos el metodo de la clase base  
+		driver = inicializarDriver();
+		driver.get("https://google.com");
+		driver.findElement(By.name("q")).sendKeys("Sophos solutions");
+		driver.findElement(By.name("q")).sendKeys(Keys.ENTER);;
+		
+		Thread.sleep(6000);
+		
+
+	  //System.out.println(driver.findElements(By.name("Sophos solutions")).size());
+			
+	assertEquals(5850000, driver.findElements(By.tagName("Sophos solutions")).size());
+		
+		/*List <WebElement> linkElements = driver.findElements(By.name("q"));              
+        String[] linkTexts = new String[linkElements.size()];              
+        	int i = 0;          
+        //extraer los textos del enlace de cada elemento Link    
+        for (WebElement e : linkElements) {              
+      linkTexts[i] = e.getText();              
+      i++;      
+  	System.out.println(e);
+        }   */ 
+
+		
+	/*	List<WebElement> all_links_webpage = driver.findElements(By.tagName("a")); 
+		System.out.println("Total no of links Available: " + all_links_webpage.size());
+		int k = all_links_webpage.size();
+		System.out.println("List of links Available: ");
+		for(int i=0;i<k;i++)
+		{
+		if(all_links_webpage.get(i).getAttribute("href").contains("Sophos"))
+		{
+		String link = all_links_webpage.get(i).getAttribute("href");
+		System.out.println(link);
+		}   
+		}
+	*/
+			
+	}
+}

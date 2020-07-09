@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Sophos Solutions">
+  <test thread-count="5" name="Busqueda en Google">
+    <classes>
+      <class name="Sophosolutions.HomePage"/>
+      <class name="Sophosolutions.AppTest"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

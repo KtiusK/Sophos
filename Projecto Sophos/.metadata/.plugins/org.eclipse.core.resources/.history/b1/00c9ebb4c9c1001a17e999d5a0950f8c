@@ -1,0 +1,64 @@
+package Metodos;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+import cucumber.api.PendingException;
+//import cucumber.api.PendingException;
+import cucumber.api.java.en.Given;
+import cucumber.api.java.en.Then;
+import cucumber.api.java.en.When;
+
+public class metodos  {
+	
+	
+	WebDriver driver;
+				
+		@Given("^Abrir el navegador web chrome$")
+		public void abrir_el_navegador_web_chrome() throws Throwable {
+		    // Write code here that turns the phrase above into concrete actions
+			System.out.println("Abrir el navegador Web");
+			
+			System.setProperty("webdriver.chrome.driver", "C:\\Users\\Katiusca\\eclipse-workspace\\Sophos Solutions\\drivers\\chromedriver.exe");
+			driver = new ChromeDriver();
+			driver.manage().window().maximize();
+			driver.get("https://google.com");
+			
+			driver.findElement(By.name("q")).sendKeys(Keys.ENTER);;
+		}
+
+		@Given("^Una vez que se abra el navegador ingresar \"(.*?)\"$")
+		public void una_vez_que_se_abra_el_navegador_ingresar(String arg1) throws Throwable {
+		    // Write code here that turns the phrase above into concrete actions
+			driver.findElement(By.name("q")).sendKeys("Sophos solutions");
+			
+			
+		}
+
+		@When("^Se introduce la palabra \"(.*?)\"$")
+		public void se_introduce_la_palabra(String arg1) throws Throwable {
+		    // Write code here that turns the phrase above into concrete actions
+		 
+		}
+
+		@When("^Se espera que realice la b?squeda$")
+		public void se_espera_que_realice_la_b_squeda() throws Throwable {
+		    // Write code here that turns the phrase above into concrete actions
+		
+		}
+
+		@Then("^La p?gina de google retorna cerca de (\\d+)\\.(\\d+)\\.(\\d+) resultados$")
+		public void la_p_gina_de_google_retorna_cerca_de_resultados(int arg1, int arg2, int arg3) throws Throwable {
+		    // Write code here that turns the phrase above into concrete actions
+		   
+		}
+
+		@Then("^Se realiza el cierre del navegador web$")
+		public void se_realiza_el_cierre_del_navegador_web() throws Throwable {
+		    // Write code here that turns the phrase above into concrete actions
+		
+		}
+}
+

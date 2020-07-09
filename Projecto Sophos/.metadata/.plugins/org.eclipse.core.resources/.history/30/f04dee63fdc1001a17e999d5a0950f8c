@@ -1,0 +1,60 @@
+package Sophosolutions;
+import java.io.IOException;
+
+import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Test;
+
+import io.cucumber.messages.internal.com.google.protobuf.compiler.PluginProtos.CodeGeneratorResponse.File;
+
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
+
+import recursos.base;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+
+
+public class HomePage extends base  {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+	
+	@BeforeTest
+	public void initialize() throws IOException {
+	driver = inicializarDriver();
+	driver.get("https://google.com");
+	}
+	
+	
+	
+	@Test 
+	
+	public void basePage () throws IOException, InterruptedException
+	{
+		//llamamos el metodo de la clase base  
+	
+		driver.findElement(By.name("q")).sendKeys("Sophos solutions");
+		driver.findElement(By.name("q")).sendKeys(Keys.ENTER);
+		Thread.sleep(10000);
+		
+		
+	}
+	
+
+	@AfterTest
+	public void teardown() {
+		
+		driver.close();
+	}
+	
+	
+	
+}

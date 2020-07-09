@@ -1,0 +1,88 @@
+[
+  {
+    "line": 4,
+    "elements": [
+      {
+        "line": 5,
+        "name": "Realizar validacion de busqueda en google de: Sophos solutions",
+        "description": "",
+        "id": "realizar-busqueda-en-google;realizar-validacion-de-busqueda-en-google-de:-sophos-solutions",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 41209900300,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "Abrir el navegador web chrome",
+            "match": {
+              "location": "metodos.abrir_el_navegador_web_chrome()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 35300,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "El usuario ingresa Sophos solutions",
+            "match": {
+              "location": "metodos.el_usuario_ingresa_Sophos_solutions()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 27700,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "Se espera que realice la busqueda",
+            "match": {
+              "location": "metodos.se_espera_que_realice_la_busqueda()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 30900,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "La pagina de google retorna los resultados",
+            "match": {
+              "location": "metodos.la_pagina_de_google_retorna_los_resultados()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 29700,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "Se realiza el cierre del navegador web",
+            "match": {
+              "location": "metodos.se_realiza_el_cierre_del_navegador_web()"
+            },
+            "keyword": "And "
+          }
+        ]
+      }
+    ],
+    "name": "Realizar busqueda en Google",
+    "description": "",
+    "id": "realizar-busqueda-en-google",
+    "keyword": "Feature",
+    "uri": "C:/Users/Katiusca/eclipse-workspace/Sophos Solutions/com.MyCucumber.Project/src/test/java/Modulos/Pruebasophos.feature",
+    "tags": [
+      {
+        "line": 3,
+        "name": "@tag1"
+      }
+    ]
+  }
+]

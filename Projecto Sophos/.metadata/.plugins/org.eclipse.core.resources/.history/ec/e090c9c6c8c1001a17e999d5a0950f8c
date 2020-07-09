@@ -1,0 +1,12 @@
+
+
+ @tag1
+
+  Scenario: Realizar validación de búsqueda en google de: "Sophos solutions"
+    Given Abrir el navegador web chrome
+    And Una vez que se abra el navegador ingresar "Sophos solutions" 
+    When El usuario presiona enter 
+    And Se espera que realice la búsqueda
+    Then La página de google retorna cerca de 5.410.000 resultados
+     And Se realiza el cierre del navegador web 
+
